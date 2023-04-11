@@ -1,16 +1,11 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import Tiles from '../../components/Tiles/Tiles'
 
 export default function Home() {
-  const tiles = useSelector((state) => state.tiles.data)
+  
   return (
     <div>
-        {
-          tiles.map(tile => (
-              <p>{tile.t}</p>
-          ))
-        }
+        <Tiles />
     </div>
   )
 }
