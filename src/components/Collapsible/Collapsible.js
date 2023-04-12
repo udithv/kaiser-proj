@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import ExpandablePanel from '../Accordion/ExpandablePanel';
 import HighlightWithinTextarea from 'react-highlight-within-textarea';
 
+import './Collapsible.css';
+
 export default function Collapsible() {
   const [text, setText] = useState('');
   const [testText, setTestText] = useState();
@@ -51,10 +53,13 @@ export default function Collapsible() {
   const renderHighlightedText = () => (
     <div>
       <label>Regex Matches Highlighted Text :</label>
-      <HighlightWithinTextarea
-        highlight={text}
-        value={testText}
-      />
+      <div className='area'>
+        <HighlightWithinTextarea
+          highlight={text}
+          value={testText}
+        />
+      </div>
+      
     </div>
   )
 
