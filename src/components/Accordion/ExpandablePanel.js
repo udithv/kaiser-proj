@@ -7,7 +7,7 @@ export default function ExpandablePanel({ children, panelname,  }) {
 
   return (
     <>
-      <button onClick={() => setIsActive(!isActive)} className='accordion'>{panelname}</button>
+      <button onClick={() => setIsActive(!isActive)} className={'accordion '+ (isActive ? 'active': '')}>{panelname}</button>
       {isActive && (<div className='panel'>
         {children}
       </div>)}

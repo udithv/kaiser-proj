@@ -11,7 +11,6 @@ export default function Layout() {
       <p>Version 1.1</p>
     </div>
     
-    
     <NavBar />
 
     <Outlet />

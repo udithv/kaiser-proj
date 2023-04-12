@@ -1,17 +1,23 @@
 .accordion {
-    background-color: #eee;
-    color: #444;
+    display: inline-flex;
+    align-items: center; 
+    background-color: white;
+    color: lightskyblue;
     cursor: pointer;
     padding: 18px;
     width: 100%;
     text-align: left;
     border: none;
     outline: none;
+    margin-bottom: 0.6rem;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px lightblue;
     transition: 0.4s;
   }
   
   .active, .accordion:hover {
-    background-color: #ccc;
+    background-color: darkblue;
+    color: white
   }
   
 
@@ -23,14 +29,15 @@
   }
 
 
-  .accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    color: #777;
-    float: right;
-    margin-left: 5px;
+  .accordion:before {
+    content: '\25B6'; /* Unicode character for "plus" sign (+) */
+    font-size: 1rem;
+    color: lightskyblue;
+    float: left;
+    margin-right: 1rem;
   }
   
-  .active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  .active:before {
+    content: "\25BC"; /* Unicode character for "minus" sign (-) */
+    color: white
   }
