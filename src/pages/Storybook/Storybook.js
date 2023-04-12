@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 export default function Storybook() {
   return (
-    <div>
+    <div className='container'>
         <h1>
             Tiles
         </h1>

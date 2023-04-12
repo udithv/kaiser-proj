@@ -6,8 +6,11 @@ import NavBar from '../NavBar/NavBar';
 export default function Layout() {
   return (
     <>
-    <h1>Data Maintenance Application (DMA V2)</h1>
-    <p>Version 1.1</p>
+    <div className='container'>
+      <h1>Data Maintenance Application (DMA V2)</h1>
+      <p>Version 1.1</p>
+    </div>
+    
     
     <NavBar />
 

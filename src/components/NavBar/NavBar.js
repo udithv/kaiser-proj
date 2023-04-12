@@ -28,6 +28,10 @@ const navlinks = [
         navtext: 'StoryBook',
         path: '/storybook'
     },
+    {
+        navtext: 'Collapsible',
+        path: '/collapsibleview'
+    }
 
 ]
 export default function NavBar() {
@@ -35,8 +39,8 @@ export default function NavBar() {
     <nav className='navbar'>
         <ul>
             {
-                navlinks.map(nl => (
-                    <li>
+                navlinks.map((nl, i) => (
+                    <li key={i} >
                         <Link to={nl.path}>{nl.navtext}</Link>
                     </li>
                 ))

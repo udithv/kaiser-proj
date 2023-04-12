@@ -7,6 +7,7 @@ import Home from './pages/Home/Home';
 
 import Layout from './components/Layout/Layout';
 import ViewOnGithub from './components/ViewOnGithub/ViewOnGithub';
+import CollapsibleView from './pages/CollapseView/CollapsibleView';
 
 
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="storybook" element={<Storybook />} />
+          <Route path="collapsibleview" element={<CollapsibleView />} />
           {/* <Route index element={<Home />} />
           <Route path="blogs" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
