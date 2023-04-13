@@ -63,6 +63,19 @@ export default function Collapsible() {
     </div>
   )
 
+
+  const renderHighlightedTextCustom = () => (
+    <div>
+      <label>Regex Matches Highlighted Text Custom :</label>
+      <div className='area'
+        dangerouslySetInnerHTML={{
+          __html: testText.replace(new RegExp(text, "gi"), (match) => `<mark>${match}</mark>`)
+        }}
+      >
+      </div>
+    </div>
+  )
+
   return (
     <>
       {renderTextForm()}
@@ -70,6 +83,7 @@ export default function Collapsible() {
         <ExpandablePanel panelname={"Simple Text"}>
          {renderTestTextForm()}
          {showHighlightedText && renderHighlightedText()}
+         {showHighlightedText && renderHighlightedTextCustom()}
         </ExpandablePanel>
 
         <ExpandablePanel panelname={"Use Notes"}>
